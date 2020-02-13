@@ -10,7 +10,7 @@
 <h1>International Dollar Converter</h1>
 
 <form action="interestServlet" method="post">
-Enter a dollar amount and I will calculate the annual interest:
+Enter a dollar amount to calculate Annual interest Rates at 4.25 percent:
 <input type="text" name="dollarAmount" size="20">
 <input type="submit" value="Calculate Interest" />
 </form>
