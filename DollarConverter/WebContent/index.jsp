@@ -10,7 +10,7 @@
 <h1>International Dollar Converter</h1>
 
 <form action="convertDollarServlet" method="post">
-Please Enter a dollar amount and I will convert it to other currencies:
+Enter Dollar amount to convert:
 <input type="text" name="dollarAmount" size="20">
 <input type="submit" value="Convert Amount" />
 
