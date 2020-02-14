@@ -1,3 +1,4 @@
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class DisplayInventory {
 	static CarListHelper cli = new CarListHelper();
 	
 	//method to add new car to inventory
-	private static void addNewCar() {
+	public static void addNewCar() {
 		// TODO Auto-generated method stub
 		System.out.print("Please Enter a Car Company: ");
 		String company = in.nextLine();
@@ -23,7 +24,7 @@ public class DisplayInventory {
 		cli.addNewCar(toAdd);
 	}
 	//method to delete car from inventory
-	private static void deleteCar() {
+	public static void deleteCar() {
 		// TODO Auto-generated method stub
 		System.out.print("Enter the Company to delete: ");
 		String company = in.nextLine();
@@ -34,7 +35,7 @@ public class DisplayInventory {
 		cli.deleteCar(toDelete);
 	}
 	// method to edit car or company entry
-	private static void editCarEntry() {
+	public static void editCarEntry() {
 		// TODO Auto-generated method stub
 		System.out.println("How would you like to find your car? ");
 		System.out.println("1 : Search by Car Company");
@@ -123,7 +124,7 @@ public class DisplayInventory {
 
 	}
 		//method to view complete inventory
-		private static void viewInventory() {
+		public static void viewInventory() {
 			List<CarList> inventory = cli.showInventory();
 			for(CarList singleCar : inventory){
 			System.out.println(singleCar.displayCarInfo());
