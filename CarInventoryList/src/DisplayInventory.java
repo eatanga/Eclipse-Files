@@ -13,7 +13,7 @@ public class DisplayInventory {
 	static CarListHelper cli = new CarListHelper();
 	
 	//method to add new car to inventory
-	public static void addNewCar() {
+	public static void addCar() {
 		// TODO Auto-generated method stub
 		System.out.print("Please Enter a Car Company: ");
 		String company = in.nextLine();
@@ -21,7 +21,7 @@ public class DisplayInventory {
 		String car = in.nextLine();
 		
 		CarList toAdd = new CarList(company, car);
-		cli.addNewCar(toAdd);
+		cli.addCar(toAdd);
 	}
 	//method to delete car from inventory
 	public static void deleteCar() {
@@ -46,11 +46,12 @@ public class DisplayInventory {
 		if (searchBy == 1) {
 			System.out.print("Please enter the company name: ");
 			String companyName = in.nextLine();
+			foundCar = cli.searchForCarByCompany(companyName);
 			
 		} else {
 			System.out.print("Please enter the Car name: ");
 			String carName = in.nextLine();
-			
+			foundCar = cli.searchForCarByCar(carName);
 
 		}
 
@@ -108,7 +109,7 @@ public class DisplayInventory {
 				in.nextLine();
 
 				if (choice == 1) {
-					addNewCar();
+					addCar();
 				} else if (choice == 2) {
 					deleteCar();
 				} else if (choice == 3) {
@@ -125,7 +126,7 @@ public class DisplayInventory {
 	}
 		//method to view complete inventory
 		public static void viewInventory() {
-			List<CarList> inventory = cli.showInventory();
+			List<CarList> inventory = cli.viewInventory();
 			for(CarList singleCar : inventory){
 			System.out.println(singleCar.displayCarInfo());
 			}
