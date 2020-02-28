@@ -3,6 +3,9 @@
 	<persistence-unit name="CarInventoryList" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>model.CarList</class>
+		<class>model.Buyer</class>
+		<class>model.PurchaseDetails</class>
+		<class>controller.LocalDateAttributeConverter</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://cis175java.c9eigdccqob0.us-east-2.rds.amazonaws.com/carInventory"/>
