@@ -38,16 +38,8 @@
   background-color: #A3ACCC;
   padding: 20px;
 }
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
+
+
 .row:after {
   content: "";
   display: table;
