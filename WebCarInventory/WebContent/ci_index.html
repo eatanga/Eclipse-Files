@@ -31,21 +31,7 @@
     background-color:#f7dcf3; /* Green */
     color: black;
   }
-  .container {
-  border-radius: 5px;
-  background-color: #A3ACCC;
-  padding: 20px;
-}
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
+
 .row:after {
   content: "";
   display: table;
@@ -60,24 +46,27 @@
 <h3 class="margin">Car Inventory</h3>
 
 <form action = "addCarServlet" method="post">
-<div class="row">
-<div class="col-75">
+
+
  <label for="cname">Company:</label>
-	<input type ="text" id="cname" name = "company">
-</div>
-</div>
-<div class="row">
- <div class="col-25">
+	<input type ="text" id="cname" name = "company"><br />
+
+<br /><br/>
+
  <label for="carname">Car:</label>
- 	<input type = "text" id ="carname" name = "car">
-</div>
-</div>
-<div class="row">
+ 	<input type = "text" id ="carname" name = "car"><br />
+
+<br /><br/>
+
 <input type = "submit" value="Add Car">
-</div>
+
 </form>
-<br />
-<a href = "viewAllCarsServlet">Full car inventory</a>
+<br /><br/>
+<div>
+<a href = "viewAllCarsServlet">View All Cars</a><br />
+</div>
+<div><a href="viewAllInventoryServlet">View Full Purchase Inventory</a> <br /></div>
+<div><a href="addCarsForInventoryServlet">Create a new Inventory</a></div>
 </div>
 </div>
 </body>
