@@ -15,6 +15,7 @@ import model.CarList;
 public class CarListHelper {
 	static EntityManagerFactory emfactory =
 			Persistence.createEntityManagerFactory("CarInventoryList");
+	
 	public void addCar(CarList cl) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
