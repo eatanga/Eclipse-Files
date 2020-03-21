@@ -19,7 +19,7 @@ public class Contact {
 	private Address address;
 	public Contact( ) {
 		super();
-		this.relationship = "spouse";
+		
 		}
 	public Contact(String name) {
 		super();

@@ -16,7 +16,7 @@ import smacc.controller.BeanConfiguration;
 import smacc.repository.ContactRepository;
 
 @SpringBootApplication
-public class SpringContactsApplication implements CommandLineRunner {
+public class SpringContactsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringContactsApplication.class, args);
@@ -29,7 +29,7 @@ public class SpringContactsApplication implements CommandLineRunner {
 		 */
 
 	}
-
+	/*
 	@Autowired
 	ContactRepository repo;
 
@@ -54,6 +54,6 @@ public class SpringContactsApplication implements CommandLineRunner {
 			System.out.println(people.toString());
 		}
 		((AbstractApplicationContext) appContext).close();
-	}
+	}*/
 
 }
