@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert New Department</title>
+</head>
+<body>
+
+<form th:object="${newDepartment}" th:action="@{/update/{id}(id=${newDepartment.id})}" method=POST>
+
+	Department Name: <input name="departmentName" size="20" th:field="*{departmentName}"> <br />
+	Department Branch: <input name="departmentBranch" size="10" th:field="*{departmentBranch}"><br />
+	Phone Number: <input name="departmentPhone" size="20" th:field="*{departmentPhone}"><br />
+	eName: <input name="employee.name" size="20" th:field="*{employee.name}"><br />
+	eJobPostion: <input name="employee.jobPosition" size="20" th:field="*{employee.jobPosition}"><br />
+	eLevel:<input name="employee.level" size="20" th:field="*{employee.level}"><br />
+	<input name="submit" type="submit" value="submit" />
+	
+</form>
+<a href="viewAll">View all departments</a>
+
+</body>
+</html>

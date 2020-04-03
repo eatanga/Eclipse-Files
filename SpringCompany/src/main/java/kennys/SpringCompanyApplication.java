@@ -17,7 +17,7 @@ import kennys.repository.DepartmentRepository;
 
 
 @SpringBootApplication
-public class SpringCompanyApplication implements CommandLineRunner{
+public class SpringCompanyApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringCompanyApplication.class, args);
@@ -26,7 +26,7 @@ public class SpringCompanyApplication implements CommandLineRunner{
 	
 	  /*ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class); 
 	  Department d = appContext.getBean("department",Department.class);
-	  System.out.println(d.toString());*/
+	  System.out.println(d.toString());
 	} 
 	@Autowired
 	DepartmentRepository repo;
@@ -51,6 +51,6 @@ public class SpringCompanyApplication implements CommandLineRunner{
 		for (Department employees : allMyDepartments) {
 			System.out.println(employees.toString());
 		}
-		((AbstractApplicationContext) appContext).close();
+		((AbstractApplicationContext) appContext).close();*/
 	}
 }
