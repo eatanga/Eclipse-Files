@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>View All Shoes</title>
+</head>
+<body>
+
+<form>
+<table>
+<tr th:each="currentShoe : ${shoes}" >
+	<td th:text="${currentShoe.id}" />
+		<td th:text="${currentShoe.name}" />
+		<td th:text="${currentShoe.brand}" />
+		<td th:text="${currentShoe.spec.size}" />
+		<td th:text="${currentShoe.spec.color}" />
+		<td th:text="${currentShoe.spec.price}" />
+		
+		<td><a th:href="@{/edit/{id}(id=${currentShoe.id})}">Edit</a></td>
+		<td><a th:href="@{/delete/{id}(id=${currentShoe.id})}">Delete</a></td>
+</tr>
+</table>
+</form>
+<a href="../inputShoe">Add a new Shoe</a>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert New Shoe</title>
+</head>
+<body>
+
+<form th:object="${newShoe}" th:action="@{/update/{id}(id=${newShoe.id})}" method=POST>
+
+	Name: <input name="name" size="20" th:field="*{name}"> <br />
+	Brand: <input name="brand" size="10" th:field="*{brand}"><br />
+	Size: <input name="spec.size" size="20" th:field="*{spec.size}"><br />
+	color: <input name="spec.color" size="20" th:field="*{spec.color}"><br />
+	price: <input name="spec.price" size="20" th:field="*{spec.price}"><br />
+	<input name="submit" type="submit" value="submit" />
+	
+</form>
+<a href="viewAll">View all Shoes</a>
+
+</body>
+</html>
